@@ -1,0 +1,232 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.track-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #ffffff;
+    color: #222222;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.track-navbar {
+    min-height: 85px;
+    width: 100%;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.track-navbar h1,
+.track-navbar .logo {
+    color: #4c8c45;
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* NAVIGATION LINKS */
+
+.track-navbar button,
+.track-navbar a {
+    display: inline-block;
+    padding: 11px 19px;
+    margin-left: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.track-navbar button:hover,
+.track-navbar a:hover {
+    background: #4c8c45;
+    color: #ffffff;
+    border-color: #4c8c45;
+}
+
+/* MAIN CONTAINER */
+
+.track-container {
+    min-height: calc(100vh - 85px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px;
+}
+
+/* FORM CARD */
+
+.track-form {
+    width: 100%;
+    max-width: 560px;
+    padding: 38px 40px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.09);
+}
+
+/* FORM HEADING */
+
+.track-form h1,
+.track-form h2 {
+    text-align: center;
+    color: #222222;
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+.track-form p {
+    text-align: center;
+    color: #888888;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 28px;
+}
+
+/* LABELS */
+
+.track-form label {
+    display: block;
+    color: #454545;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+
+/* INPUTS AND SELECT */
+
+.track-form input,
+.track-form select {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    background: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    color: #222222;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.track-form input:focus,
+.track-form select:focus {
+    border-color: #75a78a;
+    box-shadow: 0 0 0 3px rgba(117, 167, 138, 0.12);
+}
+
+.track-form input::placeholder {
+    color: #aaaaaa;
+}
+
+/* DATE INPUT */
+
+.track-form input[type="date"] {
+    color-scheme: light;
+    cursor: pointer;
+}
+
+/* QUANTITY HELP TEXT */
+
+.track-form small {
+    display: block;
+    color: #888888;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* SUBMIT BUTTON */
+
+.track-submit {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 25px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.track-submit:hover {
+    background: #4c8c45;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 140, 69, 0.2);
+}
+
+.track-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* SUCCESS AND ERROR MESSAGES */
+
+.track-message {
+    padding: 12px;
+    margin-top: 18px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+    background: #f0f7f0;
+    color: #28743b;
+}
+
+.track-message.error {
+    background: #fff1f1;
+    color: #dc3545;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+    .track-navbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .track-navbar button,
+    .track-navbar a {
+        margin: 3px;
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .track-container {
+        min-height: auto;
+        padding: 30px 16px;
+    }
+
+    .track-form {
+        padding: 28px 22px;
+    }
+
+    .track-form h1,
+    .track-form h2 {
+        font-size: 25px;
+    }
+}

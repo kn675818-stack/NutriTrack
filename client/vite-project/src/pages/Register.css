@@ -1,0 +1,407 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.register-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    color: #171717;
+}
+
+.register-layout {
+    width: 100%;
+    max-width: 1150px;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* LEFT SIDE */
+
+.register-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-food-collage {
+    width: 390px;
+    height: 390px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.register-food-tile {
+    overflow: hidden;
+    border-radius: 22px;
+    background: #eeeeee;
+}
+
+.register-food-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.register-food-tile:hover img {
+    transform: scale(1.12);
+}
+
+.register-tile-1 {
+    border-radius: 50% 20% 20% 20%;
+}
+
+.register-tile-2 {
+    border-radius: 20px;
+}
+
+.register-tile-3 {
+    border-radius: 20% 50% 20% 20%;
+}
+
+.register-tile-4 {
+    border-radius: 20% 20% 20% 50%;
+}
+
+.register-tile-5 {
+    border-radius: 50%;
+}
+
+.register-tile-6 {
+    border-radius: 20% 20% 50% 20%;
+}
+
+.register-tile-7 {
+    border-radius: 20% 20% 20% 50%;
+}
+
+.register-tile-8 {
+    border-radius: 20% 50% 20% 20%;
+}
+
+.register-tile-9 {
+    border-radius: 20% 20% 50% 20%;
+}
+
+/* CENTER LOGO */
+
+.register-collage-logo {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 2;
+}
+
+.register-collage-logo span {
+    font-size: 30px;
+}
+
+.register-collage-logo strong {
+    font-size: 16px;
+    color: #4c8c45;
+}
+
+.register-visual-caption {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.register-visual-caption h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #222222;
+}
+
+.register-visual-caption p {
+    color: #858585;
+    font-size: 14px;
+}
+
+/* RIGHT SIDE */
+
+.register-form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 30px 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.10);
+    border: 1px solid #f2f2f2;
+}
+
+/* BRAND */
+
+.register-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    color: #4c8c45;
+    margin-bottom: 20px;
+}
+
+.register-brand span {
+    font-size: 23px;
+}
+
+/* HEADING */
+
+.register-card h1 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    color: #171717;
+    margin: 0 0 8px;
+}
+
+.register-subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #87939a;
+    margin: 0 0 23px;
+}
+
+/* FORM */
+
+.register-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.register-card label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #454545;
+    margin-top: 3px;
+}
+
+.register-card input {
+    width: 100%;
+    height: 43px;
+    padding: 0 13px;
+    background: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    outline: none;
+    color: #222222;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.register-card input::placeholder {
+    color: #aaaaaa;
+}
+
+.register-card input:focus {
+    border-color: #75a78a;
+    box-shadow: 0 0 0 3px rgba(117, 167, 138, 0.12);
+}
+
+/* PASSWORD */
+
+.register-password-field {
+    width: 100%;
+    position: relative;
+}
+
+.register-password-field input {
+    padding-right: 60px;
+}
+
+.register-show-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #568c6a;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.register-show-password:hover {
+    color: #285c3c;
+}
+
+/* BUTTON */
+
+.register-btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #4c8c45;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 140, 69, 0.22);
+}
+
+.register-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* MESSAGES */
+
+.register-error {
+    color: #dc3545;
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+.register-success {
+    color: #25834b;
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+/* DIVIDER */
+
+.register-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+    color: #999999;
+    font-size: 11px;
+}
+
+.register-divider::before,
+.register-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eeeeee;
+}
+
+/* LOGIN LINK */
+
+.register-login-text {
+    text-align: center;
+    font-size: 12px;
+    color: #777777;
+    margin: 0;
+}
+
+.register-login-text a {
+    color: #4c8c45;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.register-login-text a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.register-bottom-text {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .register-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px 0;
+    }
+
+    .register-food-collage {
+        width: 300px;
+        height: 300px;
+    }
+
+    .register-visual-caption {
+        margin-top: 20px;
+    }
+
+    .register-visual-caption h2 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-page {
+        padding: 18px;
+    }
+
+    .register-food-collage {
+        width: 245px;
+        height: 245px;
+        gap: 8px;
+    }
+
+    .register-collage-logo {
+        width: 95px;
+        height: 95px;
+    }
+
+    .register-collage-logo strong {
+        font-size: 13px;
+    }
+
+    .register-card {
+        padding: 27px 22px;
+    }
+
+    .register-card h1 {
+        font-size: 21px;
+    }
+
+    .register-visual-caption h2 {
+        font-size: 19px;
+    }
+}

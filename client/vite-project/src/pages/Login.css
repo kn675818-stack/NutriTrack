@@ -1,0 +1,419 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    font-family: Arial, sans-serif;
+    color: #171717;
+}
+
+.login-layout {
+    width: 100%;
+    max-width: 1150px;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* LEFT VISUAL SECTION */
+
+.login-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-collage {
+    width: 390px;
+    height: 390px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.food-tile {
+    overflow: hidden;
+    border-radius: 22px;
+    background: #eeeeee;
+}
+
+.food-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.food-tile:hover img {
+    transform: scale(1.12);
+}
+
+.tile-1 {
+    border-radius: 50% 20% 20% 20%;
+}
+
+.tile-2 {
+    border-radius: 20px;
+}
+
+.tile-3 {
+    border-radius: 20% 50% 20% 20%;
+}
+
+.tile-4 {
+    border-radius: 20% 20% 20% 50%;
+}
+
+.tile-5 {
+    border-radius: 50%;
+}
+
+.tile-6 {
+    border-radius: 20% 20% 50% 20%;
+}
+
+.tile-7 {
+    border-radius: 20% 20% 20% 50%;
+}
+
+.tile-8 {
+    border-radius: 20% 50% 20% 20%;
+}
+
+.tile-9 {
+    border-radius: 20% 20% 50% 20%;
+}
+
+/* CENTER LOGO */
+
+.collage-logo {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 2;
+}
+
+.collage-logo span {
+    font-size: 30px;
+}
+
+.collage-logo strong {
+    font-size: 16px;
+    color: #4c8c45;
+}
+
+.visual-caption {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.visual-caption h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #222222;
+}
+
+.visual-caption p {
+    color: #858585;
+    font-size: 14px;
+}
+
+/* RIGHT LOGIN SECTION */
+
+.login-form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 390px;
+    padding: 38px 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.10);
+    border: 1px solid #f2f2f2;
+}
+
+/* BRAND */
+
+.login-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #4c8c45;
+    margin-bottom: 25px;
+}
+
+.brand-icon {
+    font-size: 23px;
+}
+
+/* HEADING */
+
+.login-card h1 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #87939a;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.login-card label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #454545;
+    margin-top: 5px;
+}
+
+.login-card input {
+    width: 100%;
+    height: 46px;
+    padding: 0 13px;
+    background: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    outline: none;
+    color: #222222;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.login-card input::placeholder {
+    color: #aaaaaa;
+}
+
+.login-card input:focus {
+    border-color: #75a78a;
+    box-shadow: 0 0 0 3px rgba(117, 167, 138, 0.12);
+}
+
+/* PASSWORD */
+
+.password-field {
+    width: 100%;
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 60px;
+}
+
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #568c6a;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.show-password:hover {
+    color: #285c3c;
+}
+
+/* FORGOT PASSWORD */
+
+.forgot-password {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: #568c6a;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+/* BUTTON */
+
+.login-btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-top: 14px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #4c8c45;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 140, 69, 0.22);
+}
+
+.login-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* MESSAGES */
+
+.login-error {
+    color: #dc3545;
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+.login-success {
+    color: #25834b;
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+/* DIVIDER */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 27px 0;
+    color: #999999;
+    font-size: 11px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eeeeee;
+}
+
+/* SIGNUP */
+
+.signup-text {
+    text-align: center;
+    font-size: 12px;
+    color: #777777;
+    margin: 0;
+}
+
+.signup-text a {
+    color: #4c8c45;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.bottom-text {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 11px;
+    margin-top: 22px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .login-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 20px 0;
+    }
+
+    .food-collage {
+        width: 300px;
+        height: 300px;
+    }
+
+    .visual-caption {
+        margin-top: 20px;
+    }
+
+    .visual-caption h2 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-page {
+        padding: 18px;
+    }
+
+    .food-collage {
+        width: 245px;
+        height: 245px;
+        gap: 8px;
+    }
+
+    .collage-logo {
+        width: 95px;
+        height: 95px;
+    }
+
+    .collage-logo strong {
+        font-size: 13px;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+    }
+
+    .login-card h1 {
+        font-size: 21px;
+    }
+
+    .visual-caption h2 {
+        font-size: 19px;
+    }
+}

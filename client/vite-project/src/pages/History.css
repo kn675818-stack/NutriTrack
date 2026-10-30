@@ -1,0 +1,345 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.history-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #ffffff;
+    color: #222222;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.history-navbar {
+    width: 100%;
+    min-height: 85px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.history-navbar h1,
+.history-navbar .logo {
+    color: #4c8c45;
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.history-navbar button,
+.history-navbar a {
+    display: inline-block;
+    padding: 11px 19px;
+    margin-left: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.history-navbar button:hover,
+.history-navbar a:hover {
+    background: #4c8c45;
+    color: #ffffff;
+    border-color: #4c8c45;
+}
+
+/* MAIN CONTAINER */
+
+.history-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 45px 5%;
+}
+
+/* HEADING */
+
+.history-heading {
+    margin-bottom: 30px;
+}
+
+.history-heading h1 {
+    color: #222222;
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.history-heading p {
+    color: #888888;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* DATE FILTER */
+
+.history-date-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    margin-bottom: 30px;
+}
+
+.history-date-filter label {
+    color: #444444;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.history-date-filter input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    background: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    color: #333333;
+    font-size: 14px;
+    outline: none;
+    color-scheme: light;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.history-date-filter input:focus {
+    border-color: #75a78a;
+    box-shadow: 0 0 0 3px rgba(117, 167, 138, 0.12);
+}
+
+/* NUTRITION SUMMARY */
+
+.history-nutrition {
+    margin-bottom: 35px;
+}
+
+.history-nutrition h2 {
+    color: #222222;
+    font-size: 23px;
+    margin: 0 0 20px;
+}
+
+.history-nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.history-nutrition-card {
+    padding: 25px 22px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.history-nutrition-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(76, 140, 69, 0.10);
+}
+
+.history-nutrition-card h3 {
+    color: #777777;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.history-nutrition-card h2 {
+    color: #4c8c45;
+    font-size: 30px;
+    margin: 0 0 5px;
+}
+
+.history-nutrition-card p {
+    color: #999999;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* FOOD HISTORY SECTION */
+
+.history-food-list {
+    margin-top: 35px;
+}
+
+.history-food-list h2 {
+    color: #222222;
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+
+/* RECORDS GRID */
+
+.history-records {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* FOOD CARD */
+
+.history-food-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.history-food-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(76, 140, 69, 0.10);
+}
+
+.history-food-info h3 {
+    color: #222222;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.history-food-info p {
+    color: #888888;
+    font-size: 13px;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.history-food-calories {
+    color: #4c8c45;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* EMPTY STATE */
+
+.history-empty {
+    padding: 45px 20px;
+    background: #f8faf8;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    color: #888888;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* STATUS */
+
+.history-status {
+    padding: 20px;
+    color: #777777;
+    text-align: center;
+    font-size: 14px;
+}
+
+.history-error {
+    padding: 15px;
+    background: #fff1f1;
+    color: #dc3545;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ACTION BUTTONS */
+
+.history-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.history-actions button,
+.history-actions a {
+    display: inline-block;
+    padding: 13px 23px;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.history-actions button:hover,
+.history-actions a:hover {
+    background: #4c8c45;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .history-nutrition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .history-records {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .history-navbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .history-navbar button,
+    .history-navbar a {
+        margin: 3px;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .history-container {
+        padding: 30px 18px;
+    }
+
+    .history-heading h1 {
+        font-size: 29px;
+    }
+
+    .history-nutrition-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .history-nutrition-card {
+        padding: 18px 14px;
+    }
+
+    .history-nutrition-card h2 {
+        font-size: 24px;
+    }
+
+    .history-food-card {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
